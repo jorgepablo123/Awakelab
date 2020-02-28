@@ -1,0 +1,31 @@
+package com.awakelab.evaluacion.modelo;
+
+public class Huevo {
+	
+	private int puntaje;
+	private int posCaida;
+	
+	public int getPuntaje() {
+		return puntaje;
+	}
+	public void setPuntaje(int puntaje) {
+		this.puntaje = puntaje;
+	}
+	public int getPosCaida() {
+		return posCaida;
+	}
+	public void setPosCaida(int posCaida) {
+		this.posCaida = posCaida;
+	}
+	@Override
+	public String toString() {
+		return "Huevo [puntaje=" + puntaje + ", posCaida=" + posCaida + "]";
+	}
+	public Huevo(int puntaje, int posCaida) {
+		super();
+		this.puntaje = puntaje;
+		this.posCaida = posCaida;
+	}
+	
+	
+}

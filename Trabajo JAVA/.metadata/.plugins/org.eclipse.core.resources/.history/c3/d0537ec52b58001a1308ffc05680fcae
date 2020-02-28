@@ -1,0 +1,44 @@
+package com.awakelab.evaluacion.modelo;
+
+public class Tablero {
+	private int puntos;
+    private char vehi;
+	public char getVehi() {
+		return vehi;
+	}
+
+	public void setVehi(char vehi) {
+		this.vehi = vehi;
+	}
+
+	public void setVehi1(char vehi) {
+		this.vehi = vehi;
+	}
+
+	public int getPuntos() {
+		return puntos;
+	}
+
+	public void setPuntos(int puntos) {
+		this.puntos = puntos;
+	}
+	public  void Calcular(int puntos) {
+		double PuntajeTotal= this.puntos;
+		
+		switch(this.vehi) {
+		case 1:
+		PuntajeTotal=(PuntajeTotal + 3);
+		break;
+		case 2:
+		PuntajeTotal=(PuntajeTotal + 2);
+		break;
+		case 3:
+		PuntajeTotal=(PuntajeTotal + 1);
+		break;
+		}
+	}
+	
+	
+}	
+	
+	

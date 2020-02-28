@@ -1,0 +1,51 @@
+
+
+
+
+public class Main {
+	
+	public static void main(String [] args) {
+	}	
+		String Profesor;
+        int edad;
+
+	String nombre;
+	String persona;
+	
+	
+}
+
+
+
+
+	
+	public String nombre; private int edad;
+	public Persona (String nombre, int edad);
+	{this.nombre = nombre; this.edad = edad; }
+	
+	public String getNombre() {return nombre;}
+	public int getedad() {return edad;}
+	
+	
+	
+	
+
+	public class Profesor extends Persona {
+
+	
+	private String IdProfesor;
+	public Profesor (String nombre, int edad) {super(nombre,edad);}
+	
+	public void setIdProfesor (String IdProfesor) {this.IdProfesor=IdProfesor;}
+	
+	public String getIdProfesor () {return IdProfesor;}
+	
+	public void mostrarNombre () {System.out.println ("Nombre profesor: " + getNombre());}
+	
+}
+}
+
+
+
+
+

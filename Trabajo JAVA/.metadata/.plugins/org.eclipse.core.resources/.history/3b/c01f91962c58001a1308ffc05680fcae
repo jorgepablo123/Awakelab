@@ -1,0 +1,31 @@
+package com.awakelab.evaluacion.modelo;
+
+public class Trupalla {
+	
+	private int armadura;
+	private String nombreConductor;
+	
+	public Trupalla(int armadura,String nombreConductor){
+  	  super(cantidadOcupantes,fechaIngreso,ubicacionX,ubicacionY);
+  	  this.armadura = armadura;
+  	  this.nombreConductor = nombreConductor;
+	}
+	public int getArmadura() {
+		return armadura;
+	}
+	public void setArmadura(int armadura) {
+		this.armadura = armadura;
+	}
+	public String getNombreConductor() {
+		return nombreConductor;
+	}
+	public void setNombreConductor(String nombreConductor) {
+		this.nombreConductor = nombreConductor;
+	}
+	@Override
+	public String toString() {
+		return "Trupalla [armadura=" + armadura + ", nombreConductor=" + nombreConductor + "]";
+	}
+	
+	
+}

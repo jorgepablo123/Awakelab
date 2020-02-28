@@ -1,0 +1,57 @@
+package com.awakelab.evaluacion.modelo;
+
+public class Tablero {
+	
+	
+	
+	public static void main(String[] args) {
+		String [][] tablero = new String[16][16];
+		 tablero[0][0] = "   ";        
+	        tablero[0][1] = " a ";
+	        tablero[0][2] = " b ";
+	        tablero[0][3] = " c ";
+	        tablero[0][4] = " d ";
+	        tablero[0][5] = " e ";
+	        tablero[0][6] = " f ";
+	        tablero[0][7] = " g ";
+	        tablero[0][8] = " h ";
+	        tablero[0][9] = " i ";
+	        tablero[0][10] = " j ";
+	        tablero[0][11] = " k ";
+	        tablero[0][12] = " l ";
+	        tablero[0][13] = " m ";
+	        tablero[0][14] = " n ";
+	        tablero[0][15] = "   ";
+	        
+	        tablero[0][0] = "   ";
+	        tablero[1][0] = " 1 ";
+	        tablero[2][0] = " 2 ";
+	        tablero[3][0] = " 3 ";
+	        tablero[4][0] = " 4 ";
+	        tablero[5][0] = " 5 ";
+	        tablero[6][0] = " 6 ";
+	        tablero[7][0] = " 7 ";
+	        tablero[8][0] = " 8 ";
+	        tablero[9][0] = " 9 ";
+	        tablero[10][0] = " 10 ";
+	        tablero[11][0] = " 11 ";
+	        tablero[12][0] = " 12 ";
+	        tablero[13][0] = " 13 ";
+	        tablero[14][0] = " 14 ";
+	        tablero[15][0] = "   ";
+	 
+		for (int fil = 0; fil < tablero.length; fil++) 
+        {
+			System.out.println("  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -----");
+            for (int col = 0; col < tablero.length; col++) 
+            {
+            	
+                System.out.print("  |  " + tablero[fil][col] + "  |  ");
+        
+            }
+            
+            System.out.println();
+        }
+		System.out.println("  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -----");
+	}
+}

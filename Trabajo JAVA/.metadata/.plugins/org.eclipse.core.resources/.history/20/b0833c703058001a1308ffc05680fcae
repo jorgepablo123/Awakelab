@@ -1,0 +1,56 @@
+package com.awakelab.evaluacion.modelo;
+
+public class Tablero {
+	private static int horizontal;
+	private static int columna;
+	private static Carro[] carros= new Carro[18];
+	private static String[][] tablero=new String[15][15];
+	
+	public static void main(String[] args) {
+		
+		
+		rellenarArreglo();
+		for (int i = 0; i <5; i++) {
+			CrearCarro();
+		}	
+			imprimirMatriz();
+	}
+	
+	public static void CrearCarro() {
+		
+		//caguano
+		horizontal = (int) (Math.random() * 15) + 1;
+		if(horizontal >1 && horizontal <=15)
+		{
+			columna = (int) (Math.random()*(7));
+			for ( int i=0;i<2;i++)
+			{
+				tablero[horizontal-1][columna+i]="C";
+			}
+		}
+		
+	}
+	public static void rellenarArreglo() {
+		for ( int i=0; i <15; i++)
+		{
+			for ( int j=0; j <15; j++)
+			{
+				tablero[i][j]="0";
+			}
+		}
+	}
+	
+	public static void imprimirMatriz()
+	{
+		//imprimir
+		for ( int i=0; i <15; i++)
+		{
+			for ( int j=0; j < 15; j++)
+			{
+				System.out.print("|"+tablero[i][j] + "\t |");
+				
+			}
+			System.out.print("\n");
+		}
+	}
+}

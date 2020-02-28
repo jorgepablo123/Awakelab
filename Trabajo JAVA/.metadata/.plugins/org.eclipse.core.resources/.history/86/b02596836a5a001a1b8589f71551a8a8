@@ -1,0 +1,52 @@
+
+public class Ejecutable {
+
+	public static void main(String[] args) {
+		   
+        
+        Electrodomesticos arrayElectro[]=new Electrodomesticos[10];
+   
+        
+        arrayElectro[0]=new Television(22,100,'A', "rojo", 50, true);
+        arrayElectro[1]=new Television(300, 50);
+        arrayElectro[2]=new Television(19, 200, 'B', "verde", 42, true);
+        arrayElectro[3]=new Television(20,100);
+        arrayElectro[4]=new Electrodomesticos(600, 20, 'D', "gris");
+        arrayElectro[5]=new Electrodomesticos(200, 30);
+        arrayElectro[6]=new Television(250, 70);
+        arrayElectro[7]=new Lavadora(400, 130, 'B', "azul", 15);
+        arrayElectro[8]=new Lavadora(400, 60, 'C', "blanco", 20);
+        arrayElectro[9]=new Lavadora(40, 50);
+   
+        
+        double sumaElectrodomesticos=0;
+        double sumaTelevisiones=0;
+        double sumaLavadoras=0;
+   
+        
+        for(int i=0;i<arrayElectro.length;i++){
+               
+            
+            
+            if(arrayElectro[i] instanceof Lavadora){
+                sumaLavadoras+=arrayElectro[i].precioFinal();
+            }
+            if(arrayElectro[i] instanceof Television){
+                sumaTelevisiones+=arrayElectro[i].precioFinal();
+            }
+            if(arrayElectro[i] instanceof Electrodomesticos){
+                sumaElectrodomesticos+=arrayElectro[i].precioFinal();
+            }
+        }
+   
+        System.out.println("El precio total de televisores :    "+sumaTelevisiones);
+        
+        System.out.println("El precio total de lavadoras :      "+sumaLavadoras);
+        
+        System.out.println("El precio total electrodomesticos : "+sumaElectrodomesticos);
+        
+    }
+   
+	
+}
+

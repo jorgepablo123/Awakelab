@@ -1,0 +1,92 @@
+package com.awakelab.evaluacion;
+
+import java.util.Scanner;
+
+public class Tablero {
+	
+	private static Carro[] carros= new Carro[18];
+	private static String[][] tablero=new String[15][15];
+	
+	//Metodo de crear carro este instacia los carros donde deben ir EN CONSTRUCCION
+	public static void CrearCarro() {
+		
+		int horizontal, columna;
+
+			//kromi
+				columna = (int) (Math.random() * 15) + 1;
+				if(columna >1 && columna <=15)
+				{
+					horizontal = (int) (Math.random()*(12));
+					for (int i=0;i<3;i++)
+					{
+						tablero[horizontal+i][columna-1]="K";
+					}
+				}
+				
+				//caguano
+				horizontal = (int) (Math.random() * 15) + 1;
+				if(horizontal >1 && horizontal <=15)
+				{
+					columna = (int) (Math.random()*(13));
+					for ( int i=0;i<2;i++)
+					{
+						tablero[horizontal-1][columna+i]="C";
+					}
+				}
+				
+				//Trupalla
+				horizontal = (int) (Math.random() * 15) + 1;
+				columna = (int) (Math.random() * 15) + 1;
+				if(horizontal >1 && horizontal <=15 && columna >1 && columna <=15)
+				{
+					for ( int i=0;i<=10;i++)
+					{
+						tablero[horizontal][columna]="T";
+					}
+				}
+				
+		}
+	
+	//Este Metodo Reellena el tablero con " "
+	public static void rellenarArreglo() {
+		for ( int i=0; i <15; i++)
+		{
+			for ( int j=0; j <15; j++)
+			{
+				tablero[i][j]=" ";
+			}
+		}
+	}
+	
+	//Metodo Lanzar Huevo
+	public static void lanzarHuevo(){
+		Scanner entrada = new Scanner(System.in);
+		int fila =0;
+		int columna=0;
+		System.out.println("Donde Deseas Tirar el Huevo?");
+		System.out.println("Ingrese Numero Fila ");
+		fila = entrada.nextInt();
+		System.out.println("Ingrese Numero Columna ");
+		columna = entrada.nextInt();
+		if(fila >=1 && fila <=15) {
+				for(int i =0; i< 15; i++) {
+					tablero[fila][columna] = "H";
+				}
+		}
+	}
+	
+	//Metodo para poder imprimir 
+	public static void imprimirTablero()
+	{
+		
+		for ( int i=0; i <15; i++)
+		{
+			for ( int j=0; j < 15; j++)
+			{
+				System.out.print("|"+tablero[i][j] + "\t |");
+				
+			}
+			System.out.print("\n");
+		}
+	}
+}

@@ -1,0 +1,22 @@
+
+public class Ejecutable {
+
+	public static void main(String[] args) {
+		
+		
+		Electrodomestico array[] = new Electrodomestico [10];
+		
+		array [0] = new Electrodomestico ("Lavadora",5);
+		array [1] = new  Electrodomestico("Lavadora",1);
+		array [2] = new Electrodomestico ("Televisor",4);
+		array [3] = new Electrodomestico ("Televisor",6);
+		// TODO Auto-generated method stub
+		
+		int suma=0;
+        for (int i=0;i<array.length;i++){
+            suma+=array[i].Calcular(i);
+		
+		
+	}
+}
+}
